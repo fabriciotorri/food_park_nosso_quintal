@@ -1,0 +1,23 @@
+# Dependências e arquivos gerados
+node_modules/
+.next/
+out/
+.npm-cache/
+
+# Arquivos de ambiente e credenciais
+.env
+.env.*
+!.env.example
+
+# Logs e arquivos locais do sistema/editor
+*.log
+.DS_Store
+Thumbs.db
+.vscode/
+
+# Cobertura e arquivos TypeScript incrementais
+coverage/
+*.tsbuildinfo
+
+# Listagem local gerada para inspeção do projeto
+Tree.md
