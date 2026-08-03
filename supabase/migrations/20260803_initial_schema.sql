@@ -1,6 +1,5 @@
 -- Food Park Nosso Quintal — estrutura inicial do banco
--- Execute este arquivo inteiro no Supabase: SQL Editor > New query > Run.
--- Ele pode ser executado apenas uma vez em um banco vazio.
+
 
 create extension if not exists "pgcrypto";
 

@@ -1,6 +1,4 @@
 -- Permissões SQL necessárias além das políticas RLS.
--- Execute este arquivo depois das duas migrações anteriores.
--- Ele libera SELECT apenas para as tabelas usadas no cardápio público.
 
 grant usage on schema public to anon, authenticated;
 

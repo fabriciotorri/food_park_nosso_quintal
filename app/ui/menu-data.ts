@@ -4,7 +4,7 @@ export type Establishment = {
   type: "Comida" | "Bar";
   emoji: string;
   whatsapp: string;
-  items: { id: string; name: string; description: string; price: number }[];
+  items: { id: string; category: string; name: string; description: string; price: number }[];
 };
 
 export type FoodParkTable = {
@@ -28,22 +28,22 @@ export const establishments: Establishment[] = [
   {
     id: "burger-da-praca", name: "Burger da Praça", type: "Comida", emoji: "🍔", whatsapp: "5511999991111",
     items: [
-      { id: "burger-classico", name: "Burger Clássico", description: "Pão, hambúrguer, queijo e molho da casa.", price: 28 },
-      { id: "batata", name: "Batata Frita", description: "Porção individual crocante.", price: 14 },
+      { id: "burger-classico", category: "Lanches", name: "Burger Clássico", description: "Pão, hambúrguer, queijo e molho da casa.", price: 28 },
+      { id: "batata", category: "Porções", name: "Batata Frita", description: "Porção individual crocante.", price: 14 },
     ],
   },
   {
     id: "pizza-park", name: "Pizza Park", type: "Comida", emoji: "🍕", whatsapp: "5511999992222",
     items: [
-      { id: "pizza-margherita", name: "Pizza Margherita", description: "Molho, muçarela, tomate e manjericão.", price: 42 },
-      { id: "pizza-calabresa", name: "Pizza Calabresa", description: "Muçarela, calabresa e cebola.", price: 45 },
+      { id: "pizza-margherita", category: "Pizzas", name: "Pizza Margherita", description: "Molho, muçarela, tomate e manjericão.", price: 42 },
+      { id: "pizza-calabresa", category: "Pizzas", name: "Pizza Calabresa", description: "Muçarela, calabresa e cebola.", price: 45 },
     ],
   },
   {
     id: "bar-do-park", name: "Bar do Park", type: "Bar", emoji: "🍺", whatsapp: "5511999993333",
     items: [
-      { id: "pilsen", name: "Cerveja Pilsen", description: "Long neck gelada, 330 ml.", price: 12 },
-      { id: "caipirinha", name: "Caipirinha", description: "Limão, cachaça, açúcar e gelo.", price: 22 },
+      { id: "pilsen", category: "Cervejas", name: "Cerveja Pilsen", description: "Long neck gelada, 330 ml.", price: 12 },
+      { id: "caipirinha", category: "Drinks", name: "Caipirinha", description: "Limão, cachaça, açúcar e gelo.", price: 22 },
     ],
   },
 ];
