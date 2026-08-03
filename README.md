@@ -17,6 +17,21 @@ O primeiro QR Code de teste deve apontar para `http://localhost:3000/m/mesa-12-d
 
 Por enquanto as mesas são cadastradas em `app/ui/menu-data.ts`, na lista `foodParkTables`. O próximo passo será mover essa lista para o banco de dados, para gerar e desativar QR Codes pelo painel administrativo.
 
+## Supabase
+
+1. No Supabase, abra **SQL Editor** > **New query**.
+2. Abra `supabase/migrations/20260803_initial_schema.sql` neste projeto, copie todo o conteúdo e cole no editor.
+3. Clique em **Run**. Isso cria as tabelas do MVP e ativa a segurança por linha (RLS).
+4. Em **Project Settings** > **API**, copie a Project URL e a Publishable key. Copie `.env.example` para `.env.local` e preencha apenas essas duas variáveis por enquanto.
+
+Depois, execute também `supabase/migrations/20260803_public_menu_read_policies.sql` no SQL Editor. Ele libera somente a leitura dos cardápios ativos para os visitantes; pedidos continuam bloqueados para acesso público.
+
+Por fim, execute `supabase/migrations/20260803_grant_public_menu_access.sql`. Como a opção de não expor novas tabelas foi selecionada na criação do projeto, esta migração concede a permissão SQL de leitura que complementa as políticas RLS.
+
+Não compartilhe a senha do banco nem a chave `service_role`; `.env.local` já está ignorado pelo Git.
+
+Depois de preencher `.env.local`, reinicie `npm run dev` e abra `http://localhost:3000/api/database-status`. A resposta `{ "connected": true }` confirma que o projeto consegue falar com o banco sem expor dados ou credenciais.
+
 ## Plano de telas e funcionalidades
 
 ### Fase 1 — MVP (o que este protótipo representa)
