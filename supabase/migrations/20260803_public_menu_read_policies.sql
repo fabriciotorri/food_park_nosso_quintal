@@ -1,5 +1,4 @@
 -- Políticas de leitura pública do cardápio.
--- Execute uma única vez, depois de 20260803_initial_schema.sql.
 -- Não há políticas públicas para pedidos: eles serão gravados pelo servidor.
 
 create policy "Public can read food parks"
